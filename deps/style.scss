@@ -1,6 +1,6 @@
 // vars
 $primary-color: #ffd900;
-$transparent: #d4d4d400;
+$transparent: #1414148c;
 
 // reset
 html, body {
@@ -9,18 +9,15 @@ html, body {
   box-sizing: border-box;
   height: 100%;
   // background: linear-gradient(50deg, #b0fafab2, #ffffff);
+  background-color: $transparent;
 }
 
 .container {
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
+  align-items: center;
 
-  .chart-container {
-    background: $transparent;
-    
-  }
 }
-
 header {
   display: flex;
   width: 100%;
@@ -62,4 +59,13 @@ svg {
   fill: none;
   stroke: #fff;
   stroke-linejoin: round;
+}
+
+#legend {
+  path {
+    opacity: 0;
+  }
+  line {
+    opacity: 0;
+  }
 }

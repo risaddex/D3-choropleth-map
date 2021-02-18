@@ -3,14 +3,13 @@ html, body {
   padding: 0;
   box-sizing: border-box;
   height: 100%;
+  background-color: #1414148c;
 }
 
 .container {
   display: flex;
-  justify-content: flex-start;
-}
-.container .chart-container {
-  background: #d4d4d400;
+  justify-content: center;
+  align-items: center;
 }
 
 header {
@@ -39,7 +38,7 @@ header h3 {
   box-shadow: 1px 1px 10px;
   border-radius: 10px;
   pointer-events: none;
-  background-color: #d4d4d400;
+  background-color: #1414148c;
 }
 
 svg {
@@ -53,6 +52,13 @@ svg .cell:hover {
   fill: none;
   stroke: #fff;
   stroke-linejoin: round;
+}
+
+#legend path {
+  opacity: 0;
+}
+#legend line {
+  opacity: 0;
 }
 
 /*# sourceMappingURL=style.css.map */
