@@ -8,16 +8,12 @@ html, body {
   padding: 0;
   box-sizing: border-box;
   height: 100%;
-  overflow: auto;
-  background: linear-gradient(50deg, #b0fafab2, #ffffff);
+  // background: linear-gradient(50deg, #b0fafab2, #ffffff);
 }
 
 .container {
   display: flex;
-  width: 100vw;
-  flex-direction: column;
   justify-content: flex-start;
-  padding: 0em 2em;
 
   .chart-container {
     background: $transparent;
@@ -26,7 +22,6 @@ html, body {
 }
 
 header {
-  margin-top: 5%;
   display: flex;
   width: 100%;
   align-items: center;
@@ -58,7 +53,13 @@ header {
 }
 
 svg {
+  fill: black;
   .cell:hover {
     stroke: black;
   }
+}
+.states {
+  fill: none;
+  stroke: #fff;
+  stroke-linejoin: round;
 }

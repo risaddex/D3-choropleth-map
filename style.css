@@ -3,23 +3,17 @@ html, body {
   padding: 0;
   box-sizing: border-box;
   height: 100%;
-  overflow: auto;
-  background: linear-gradient(50deg, #b0fafab2, #ffffff);
 }
 
 .container {
   display: flex;
-  width: 100vw;
-  flex-direction: column;
   justify-content: flex-start;
-  padding: 0em 2em;
 }
 .container .chart-container {
   background: #d4d4d400;
 }
 
 header {
-  margin-top: 5%;
   display: flex;
   width: 100%;
   align-items: center;
@@ -48,8 +42,17 @@ header h3 {
   background-color: #d4d4d400;
 }
 
+svg {
+  fill: black;
+}
 svg .cell:hover {
   stroke: black;
+}
+
+.states {
+  fill: none;
+  stroke: #fff;
+  stroke-linejoin: round;
 }
 
 /*# sourceMappingURL=style.css.map */
