@@ -1,0 +1,64 @@
+// vars
+$primary-color: #ffd900;
+$transparent: #d4d4d400;
+
+// reset
+html, body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  height: 100%;
+  overflow: auto;
+  background: linear-gradient(50deg, #b0fafab2, #ffffff);
+}
+
+.container {
+  display: flex;
+  width: 100vw;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 0em 2em;
+
+  .chart-container {
+    background: $transparent;
+    
+  }
+}
+
+header {
+  margin-top: 5%;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  flex-direction: column;
+
+  h2{
+    padding: 0px;
+    margin: 0px;
+  }
+
+  h3 {
+    padding: 0px;
+    margin: 0px;
+  }
+}
+
+#tooltip {
+  font-size: 0.9em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  text-align: justify;
+  padding: 5px;
+  box-shadow: 1px 1px 10px;
+  border-radius: 10px;
+  pointer-events: none;  
+  background-color: $transparent;
+}
+
+svg {
+  .cell:hover {
+    stroke: black;
+  }
+}
