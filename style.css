@@ -3,7 +3,7 @@ html, body {
   padding: 0;
   box-sizing: border-box;
   height: 100%;
-  background-color: #1414148c;
+  background-color: #e7000000;
 }
 
 .container {
@@ -23,6 +23,7 @@ header h2 {
   margin: 0px;
 }
 header h3 {
+  font-size: 0.8em;
   padding: 0px;
   margin: 0px;
 }
@@ -38,14 +39,12 @@ header h3 {
   box-shadow: 1px 1px 10px;
   border-radius: 10px;
   pointer-events: none;
-  background-color: #1414148c;
+  background-color: #e7000000;
 }
 
-svg {
-  fill: black;
-}
-svg .cell:hover {
-  stroke: black;
+svg .county:hover {
+  stroke: #ff0000;
+  stroke-linejoin: round;
 }
 
 .states {

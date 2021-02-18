@@ -13,7 +13,6 @@ const svg = d3.select('.chart-container')
   .attr('height', HEIGHT);
 
 const path = d3.geoPath();
-let edu, county, filt;
 
 //! TOOLTIP
 const tooltip = d3.select('.chart-container')
@@ -21,18 +20,12 @@ const tooltip = d3.select('.chart-container')
   .attr('id', 'tooltip')
   .style('opacity', 0);
 
-// Load external data and boot
-d3.queue()
-  .defer(d3.json, COUNTY_DATA)
-  .defer(d3.json, EDUCATION_DATA)
-  .await(ready);
-
-function ready(error, usa, data) {
+const buildWithData = (error, usa, data) => {
   if(error) throw new Error(error)
   const bachelor = data.map((d, i) => d.bachelorsOrHigher);
 
-  edu = data
-  county = topojson.feature(usa, usa.objects.counties).features
+  const edu = data
+  const county = topojson.feature(usa, usa.objects.counties).features
   
   //! CONSTS
   const max = d3.max(bachelor)
@@ -120,5 +113,10 @@ function ready(error, usa, data) {
     .attr('x', d => legendScale(d) - BAR_SIZE - PADDING)
     .attr('transform', `translate(${BAR_SIZE + PADDING}, ${PADDING -20})`)
 
-    
 }
+
+// Load external data and boot
+d3.queue()
+  .defer(d3.json, COUNTY_DATA)
+  .defer(d3.json, EDUCATION_DATA)
+  .await(buildWithData);

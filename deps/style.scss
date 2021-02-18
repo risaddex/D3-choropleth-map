@@ -1,6 +1,5 @@
 // vars
-$primary-color: #ffd900;
-$transparent: #1414148c;
+$transparent: #e7000000;
 
 // reset
 html, body {
@@ -8,7 +7,6 @@ html, body {
   padding: 0;
   box-sizing: border-box;
   height: 100%;
-  // background: linear-gradient(50deg, #b0fafab2, #ffffff);
   background-color: $transparent;
 }
 
@@ -30,6 +28,7 @@ header {
   }
 
   h3 {
+    font-size: 0.8em;
     padding: 0px;
     margin: 0px;
   }
@@ -50,9 +49,9 @@ header {
 }
 
 svg {
-  fill: black;
-  .cell:hover {
-    stroke: black;
+  .county:hover {
+    stroke: #ff0000;
+    stroke-linejoin: round;
   }
 }
 .states {
