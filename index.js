@@ -1,11 +1,11 @@
 //! CONSTS
-const WIDTH = window.screen.availWidth * .85
-const HEIGHT = window.screen.availHeight * .85
+const WIDTH = 960
+const HEIGHT = 600
 const PADDING = 60;
 const EDUCATION_DATA = 'https://raw.githubusercontent.com/no-stack-dub-sack/testable-projects-fcc/master/src/data/choropleth_map/for_user_education.json';
 const COUNTY_DATA = 'https://raw.githubusercontent.com/no-stack-dub-sack/testable-projects-fcc/master/src/data/choropleth_map/counties.json';
 
-const BAR_SIZE = WIDTH /3;
+const BAR_SIZE = 300 ;
 //! SVG
 const svg = d3.select('.chart-container')
   .append('svg')
@@ -90,7 +90,7 @@ const buildWithData = (error, usa, data) => {
     .attr('class', 'states')
     .attr('d', path);
   
-  const legendScale = d3.scaleLinear().domain([min, max]).range([BAR_SIZE * 2, BAR_SIZE * 3]);
+  const legendScale = d3.scaleLinear().domain([min, max]).range([BAR_SIZE * 2, BAR_SIZE * 3 - PADDING]);
   
   const legendX = d3.axisBottom()
     .scale(legendScale)
@@ -107,11 +107,11 @@ const buildWithData = (error, usa, data) => {
     .data(colors.domain())
     .enter()
     .append('rect')
-    .attr('height', 15)
-    .attr('width', BAR_SIZE / 8)
+    .attr('height', 10)
+    .attr('width', BAR_SIZE / 9)
     .attr('fill', (d,i) => colors(d))
     .attr('x', d => legendScale(d) - BAR_SIZE - PADDING)
-    .attr('transform', `translate(${BAR_SIZE + PADDING}, ${PADDING -20})`)
+    .attr('transform', `translate(${BAR_SIZE + PADDING}, ${PADDING -20})`);
 
 }
 

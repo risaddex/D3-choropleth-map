@@ -3,12 +3,16 @@ html, body {
   padding: 0;
   box-sizing: border-box;
   height: 100%;
+  width: auto;
   background-color: #e7000000;
 }
 
 .container {
+  width: 960;
   display: flex;
-  justify-content: center;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  flex-direction: column;
   align-items: center;
 }
 
@@ -16,7 +20,7 @@ header {
   display: flex;
   width: 100%;
   align-items: center;
-  flex-direction: column;
+  justify-content: center;
 }
 header h2 {
   padding: 0px;
